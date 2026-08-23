@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    /* Paleta Oficial Intitax - Modo Claro */
+    --background: #ffffff;
+    --foreground: #3a3c40; /* Gris Carbón */
+    --card: #ffffff;
+    --card-foreground: #3a3c40;
+    --primary: #f18a0e; /* Naranja Inti Primario */
+    --primary-foreground: #ffffff;
+    --secondary: #f2cdac; /* Crema / Arena Suave */
+    --secondary-foreground: #3a3c40;
+    --muted: #f2f2f2; /* Blanco / Gris Claro */
+    --muted-foreground: #64748b;
+    --border: #e8eaed;
+    --accent-success: #059669;
+    --accent-hover: #f2a35e; /* Naranja Medio / Hover */
+    --ring: #f18a0e;
+  }
+
+  .dark {
+    /* Paleta Oficial Intitax - Modo Oscuro */
+    --background: #141618;
+    --foreground: #f2f2f2; /* Gris Claro */
+    --card: #222529;
+    --card-foreground: #f2f2f2;
+    --primary: #f18a0e; /* Naranja Inti Primario */
+    --primary-foreground: #ffffff;
+    --secondary: #3a3c40; /* Gris Carbón */
+    --secondary-foreground: #f2f2f2;
+    --muted: #2a2d32;
+    --muted-foreground: #9ca3af;
+    --border: #3a3c40;
+    --accent-success: #10b981;
+    --accent-hover: #f2a35e;
+    --ring: #f18a0e;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-accent-success: var(--accent-success);
+  --color-accent-hover: var(--accent-hover);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 34s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.group\/marquee:hover .animate-marquee,
+.animate-marquee:hover {
+  animation-play-state: paused !important;
 }
