@@ -6,36 +6,59 @@ import { useLanguage } from "@/components/shared/providers";
 import { languageToggleStyles } from "./LanguageToggle.styles";
 
 export function LanguageToggle() {
-  const { language, toggleLanguage, mounted, t } = useLanguage();
+  const { language, setLanguage, mounted } = useLanguage();
 
   if (!mounted) {
     return (
-      <button
-        type="button"
-        className={languageToggleStyles.button}
-        aria-label="Cambiar idioma"
-        disabled
-      >
-        <Globe className="h-4 w-4 text-primary" />
-        <span className={languageToggleStyles.langText}>ES</span>
-      </button>
+      <div className={languageToggleStyles.container} aria-label="Idioma">
+        <Globe className={languageToggleStyles.globeIcon} />
+        <span className={languageToggleStyles.activeButton}>ES</span>
+        <span className={languageToggleStyles.separator}>/</span>
+        <span className={languageToggleStyles.inactiveButton}>EN</span>
+      </div>
     );
   }
 
   const isEs = language === "es";
 
   return (
-    <button
-      type="button"
-      onClick={toggleLanguage}
-      className={languageToggleStyles.button}
-      aria-label={t.navbar.switchLanguage}
-      title={isEs ? "Switch to English (EN)" : "Cambiar a Español (ES)"}
+    <div
+      className={languageToggleStyles.container}
+      role="group"
+      aria-label="Seleccionar idioma / Select language"
     >
-      <Globe className="h-4 w-4 text-primary" />
-      <span className={languageToggleStyles.langText}>
-        {isEs ? "ES" : "EN"}
+      <Globe className={languageToggleStyles.globeIcon} />
+      <button
+        type="button"
+        onClick={() => setLanguage("es")}
+        className={
+          isEs
+            ? languageToggleStyles.activeButton
+            : languageToggleStyles.inactiveButton
+        }
+        aria-pressed={isEs}
+        aria-label="Español"
+        title="Cambiar a Español (ES)"
+      >
+        ES
+      </button>
+      <span className={languageToggleStyles.separator} aria-hidden="true">
+        /
       </span>
-    </button>
+      <button
+        type="button"
+        onClick={() => setLanguage("en")}
+        className={
+          !isEs
+            ? languageToggleStyles.activeButton
+            : languageToggleStyles.inactiveButton
+        }
+        aria-pressed={!isEs}
+        aria-label="English"
+        title="Switch to English (EN)"
+      >
+        EN
+      </button>
+    </div>
   );
 }

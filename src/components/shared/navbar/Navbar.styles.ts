@@ -10,9 +10,9 @@ export const navbarStyles = {
     "flex items-center transition-opacity hover:opacity-90 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-lg shrink-0",
 
   // Desktop Navigation
-  desktopNav: "hidden lg:flex items-center gap-1 xl:gap-2 shrink-0",
+  desktopNav: "hidden lg:flex items-center gap-1.5 xl:gap-2.5 shrink-0",
   navLink:
-    "inline-flex items-center px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-xl transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
+    "inline-flex items-center px-3.5 py-2 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted rounded-xl transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring whitespace-nowrap",
 
   // Right Actions (Teléfono destacado cápsula oficial + Idioma + Tema)
   actionsGroup: "hidden lg:flex items-center gap-3 shrink-0",

@@ -4,7 +4,7 @@ export const heroStyles = {
   ambientGlow:
     "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10",
   container:
-    "mx-auto w-full max-w-5xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[94vw] 3xl:max-w-[92vw] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-10 tv:px-12 3xl:px-16 mt-0 lg:my-auto lg:-translate-y-6 lg:flex-1 tv:my-0 tv:translate-y-0 tv:h-full flex flex-col justify-start lg:justify-center tv:justify-between",
+    "mx-auto w-full max-w-5xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[88vw] 3xl:max-w-[88vw] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-10 tv:px-12 3xl:px-16 mt-0 lg:my-auto lg:-translate-y-6 lg:flex-1 tv:my-0 tv:translate-y-0 tv:h-full flex flex-col justify-start lg:justify-center tv:justify-between",
 
   // 2-Column Grid (Activo en Tablet md y Desktop lg/xl/2xl/tv)
   grid: "grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-10 xl:gap-14 2xl:gap-16 tv:gap-20 3xl:gap-24 items-center tv:flex-1 tv:my-auto",
