@@ -21,7 +21,7 @@ export function HeroSection() {
           {/* Left Column: Headline & CTAs */}
           <div className={heroStyles.contentCol}>
             <h1 className={heroStyles.title}>
-              {t.hero.titleStart}
+              <span className={heroStyles.titleStart}>{t.hero.titleStart}</span>
               <span className={heroStyles.titleHighlight}>
                 {t.hero.titleHighlight}
               </span>

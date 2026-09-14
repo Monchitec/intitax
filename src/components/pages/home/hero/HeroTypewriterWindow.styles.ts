@@ -1,12 +1,12 @@
 export const heroTypewriterStyles = {
   wrapper:
-    "relative mx-auto w-full max-w-[250px] xs:max-w-[280px] sm:max-w-[320px] md:max-w-[330px] lg:max-w-[335px] xl:max-w-[370px] tv:max-w-[440px] 3xl:max-w-[500px]",
+    "relative mx-auto w-full max-w-[250px] xs:max-w-[280px] sm:max-w-[320px] md:max-w-[330px] lg:max-w-[335px] xl:max-w-[370px] 2xl:max-w-[430px] tv:max-w-[480px] 3xl:max-w-[540px]",
   ambientGlow:
     "absolute -inset-4 rounded-3xl bg-primary/20 blur-3xl opacity-50 pointer-events-none -z-10",
 
-  // Laptop Outer Chassis with 3D Perspective (Reducido para encuadre compacto, expandido en TV)
+  // Laptop Outer Chassis with 3D Perspective (Reducido para móvil/laptop, expandido en 2xl y TV)
   laptopContainer:
-    "relative flex flex-col items-center select-none py-1 w-full scale-[0.88] md:scale-[0.90] lg:scale-[0.90] xl:scale-[0.92] tv:scale-[1.04] 3xl:scale-[1.12] origin-top",
+    "relative flex flex-col items-center select-none py-1 w-full scale-[0.88] md:scale-[0.90] lg:scale-[0.90] xl:scale-[0.92] 2xl:scale-[1.02] tv:scale-[1.08] 3xl:scale-[1.16] origin-top",
 
   // Laptop Screen (Lid & Display standing upright)
   screenLid:
@@ -14,7 +14,7 @@ export const heroTypewriterStyles = {
   cameraDot:
     "absolute top-1 sm:top-1.5 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full bg-slate-500 border border-slate-400",
   screenDisplay:
-    "relative overflow-hidden rounded-md sm:rounded-lg bg-card border border-border/80 shadow-inner flex flex-col min-h-[140px] sm:min-h-[155px] md:min-h-[165px] lg:min-h-[175px] xl:min-h-[185px]",
+    "relative overflow-hidden rounded-md sm:rounded-lg bg-card border border-border/80 shadow-inner flex flex-col min-h-[140px] sm:min-h-[155px] md:min-h-[165px] lg:min-h-[175px] xl:min-h-[185px] 2xl:min-h-[205px] tv:min-h-[220px]",
 
   // Document Screen Header
   docHeader:
@@ -33,7 +33,7 @@ export const heroTypewriterStyles = {
   watermarkShield:
     "absolute right-1 -bottom-3 h-16 w-16 sm:h-20 sm:w-20 text-primary/5 pointer-events-none -z-0",
   contentWrapper:
-    "relative z-10 font-[family-name:var(--font-jetbrains-mono)] text-xs sm:text-sm md:text-xs lg:text-sm xl:text-[15px] font-normal text-foreground leading-relaxed break-words tracking-tight",
+    "relative z-10 font-[family-name:var(--font-jetbrains-mono)] text-xs sm:text-sm md:text-xs lg:text-sm xl:text-[15px] 2xl:text-[16px] font-normal text-foreground leading-relaxed break-words tracking-tight",
   cursor:
     "inline-block w-1.5 h-3.5 sm:h-4 bg-primary ml-1 align-middle animate-pulse rounded-xs",
 

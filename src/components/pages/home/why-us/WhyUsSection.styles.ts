@@ -2,19 +2,19 @@ export const whyUsStyles = {
   section:
     "py-12 sm:py-16 tv:py-24 3xl:py-28 bg-muted/20 border-t border-border/80 scroll-mt-20 tv:min-h-[calc(100dvh-5.5rem)] tv:flex tv:flex-col tv:justify-center",
   container:
-    "mx-auto max-w-7xl tv:max-w-[94vw] 3xl:max-w-[92vw] px-4 sm:px-6 lg:px-8 tv:px-12 3xl:px-16 tv:w-full",
+    "mx-auto max-w-7xl 2xl:max-w-[94vw] 3xl:max-w-[92vw] px-4 sm:px-6 lg:px-8 2xl:px-10 tv:px-12 3xl:px-16 tv:w-full",
 
   // Header (Left-aligned codewithbhurtel style)
   headerWrapper:
-    "max-w-5xl tv:max-w-none mx-auto mb-10 tv:mb-14 text-left flex flex-col items-start",
+    "max-w-5xl 2xl:max-w-none mx-auto mb-10 2xl:mb-12 tv:mb-14 text-left flex flex-col items-start",
   title:
-    "text-2xl sm:text-4xl tv:text-5xl 3xl:text-6xl font-black tracking-tight text-foreground",
+    "text-2xl sm:text-4xl 2xl:text-5xl 3xl:text-6xl font-black tracking-tight text-foreground",
   accentLine: "w-12 h-1 bg-primary rounded-full mt-2.5 mb-3",
   subtitle:
-    "text-sm sm:text-base tv:text-lg 3xl:text-xl text-muted-foreground leading-relaxed max-w-2xl tv:max-w-4xl",
+    "text-sm sm:text-base 2xl:text-lg 3xl:text-xl text-muted-foreground leading-relaxed max-w-2xl 2xl:max-w-3xl tv:max-w-4xl",
 
   // Comparison Grid
-  grid: "grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 tv:gap-12 3xl:gap-16 max-w-5xl tv:max-w-none mx-auto",
+  grid: "grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 2xl:gap-10 tv:gap-12 3xl:gap-16 max-w-5xl 2xl:max-w-none mx-auto",
 
   // Intitax Winner Card
   intitaxCard:

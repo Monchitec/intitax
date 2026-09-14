@@ -2,11 +2,11 @@ export const ctaStyles = {
   section:
     "py-12 sm:py-16 tv:py-24 3xl:py-28 bg-background border-t border-border/80 scroll-mt-20 tv:min-h-[calc(100dvh-5.5rem)] tv:flex tv:flex-col tv:justify-center",
   container:
-    "mx-auto max-w-5xl tv:max-w-[94vw] 3xl:max-w-[92vw] px-4 sm:px-6 lg:px-8 tv:px-12 3xl:px-16 tv:w-full",
+    "mx-auto max-w-5xl 2xl:max-w-[94vw] 3xl:max-w-[92vw] px-4 sm:px-6 lg:px-8 2xl:px-10 tv:px-12 3xl:px-16 tv:w-full",
 
   // Banner Card
   bannerCard:
-    "relative overflow-hidden rounded-3xl border-2 border-primary/30 bg-card p-8 sm:p-14 tv:p-20 3xl:p-24 text-center shadow-2xl shadow-primary/10",
+    "relative overflow-hidden rounded-3xl border-2 border-primary/30 bg-card p-8 sm:p-14 2xl:p-16 tv:p-20 3xl:p-24 text-center shadow-2xl shadow-primary/10",
   ambientGlow:
     "absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-primary/15 blur-3xl pointer-events-none",
 
@@ -15,9 +15,9 @@ export const ctaStyles = {
   badgeDot: "h-2 w-2 rounded-full bg-accent-success animate-ping",
 
   title:
-    "text-3xl sm:text-5xl tv:text-6xl 3xl:text-7xl font-black tracking-tight text-foreground max-w-2xl tv:max-w-5xl mx-auto leading-tight",
+    "text-3xl sm:text-5xl 2xl:text-6xl 3xl:text-7xl font-black tracking-tight text-foreground max-w-2xl 2xl:max-w-4xl tv:max-w-5xl mx-auto leading-tight",
   subtitle:
-    "mt-4 text-base sm:text-lg tv:text-xl 3xl:text-2xl text-muted-foreground max-w-2xl tv:max-w-4xl mx-auto leading-relaxed",
+    "mt-4 text-base sm:text-lg 2xl:text-xl 3xl:text-2xl text-muted-foreground max-w-2xl 2xl:max-w-3xl tv:max-w-4xl mx-auto leading-relaxed",
 
   // Actions
   buttonGroup:

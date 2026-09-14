@@ -3,14 +3,14 @@ export const servicesStyles = {
   section:
     "pt-6 sm:pt-10 pb-16 sm:pb-24 bg-muted/20 border-b border-border/70 scroll-mt-16",
   container:
-    "mx-auto max-w-7xl tv:max-w-[94vw] 3xl:max-w-[92vw] px-4 sm:px-6 lg:px-8 tv:px-12 3xl:px-16 tv:w-full",
+    "mx-auto max-w-7xl 2xl:max-w-[94vw] 3xl:max-w-[92vw] px-4 sm:px-6 lg:px-8 2xl:px-10 tv:px-12 3xl:px-16 tv:w-full",
 
   // Header
   headerWrapper:
-    "mx-auto max-w-3xl tv:max-w-5xl text-center mb-10 sm:mb-14 tv:mb-16",
+    "mx-auto max-w-3xl 2xl:max-w-4xl tv:max-w-5xl text-center mb-10 sm:mb-14 tv:mb-16",
   title:
-    "text-3xl sm:text-5xl tv:text-6xl font-black tracking-tight text-foreground",
-  subtitle: "mt-3 text-sm sm:text-base tv:text-lg text-muted-foreground leading-relaxed",
+    "text-3xl sm:text-5xl 2xl:text-6xl font-black tracking-tight text-foreground",
+  subtitle: "mt-3 text-sm sm:text-base 2xl:text-lg tv:text-lg text-muted-foreground leading-relaxed",
 
   // Symmetrical Grid
   grid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 tv:grid-cols-5 gap-6 sm:gap-7 tv:gap-8",
