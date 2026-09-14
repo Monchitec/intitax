@@ -55,6 +55,8 @@
   --color-accent-success: var(--accent-success);
   --color-accent-hover: var(--accent-hover);
   --color-ring: var(--ring);
+  --breakpoint-tv: 1800px;
+  --breakpoint-3xl: 2200px;
   --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }

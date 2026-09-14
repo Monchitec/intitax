@@ -1,12 +1,12 @@
 export const heroTypewriterStyles = {
   wrapper:
-    "relative mx-auto w-full max-w-[250px] xs:max-w-[280px] sm:max-w-[320px] md:max-w-[330px] lg:max-w-[335px] xl:max-w-[370px]",
+    "relative mx-auto w-full max-w-[250px] xs:max-w-[280px] sm:max-w-[320px] md:max-w-[330px] lg:max-w-[335px] xl:max-w-[370px] tv:max-w-[440px] 3xl:max-w-[500px]",
   ambientGlow:
     "absolute -inset-4 rounded-3xl bg-primary/20 blur-3xl opacity-50 pointer-events-none -z-10",
 
-  // Laptop Outer Chassis with 3D Perspective (Reducido para encuadre compacto)
+  // Laptop Outer Chassis with 3D Perspective (Reducido para encuadre compacto, expandido en TV)
   laptopContainer:
-    "relative flex flex-col items-center select-none py-1 w-full scale-[0.88] md:scale-[0.90] lg:scale-[0.90] xl:scale-[0.92] origin-top",
+    "relative flex flex-col items-center select-none py-1 w-full scale-[0.88] md:scale-[0.90] lg:scale-[0.90] xl:scale-[0.92] tv:scale-[1.04] 3xl:scale-[1.12] origin-top",
 
   // Laptop Screen (Lid & Display standing upright)
   screenLid:

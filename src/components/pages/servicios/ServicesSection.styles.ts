@@ -2,15 +2,18 @@ export const servicesStyles = {
   // Clean padding
   section:
     "pt-6 sm:pt-10 pb-16 sm:pb-24 bg-muted/20 border-b border-border/70 scroll-mt-16",
-  container: "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
+  container:
+    "mx-auto max-w-7xl tv:max-w-[94vw] 3xl:max-w-[92vw] px-4 sm:px-6 lg:px-8 tv:px-12 3xl:px-16 tv:w-full",
 
   // Header
-  headerWrapper: "mx-auto max-w-3xl text-center mb-10 sm:mb-14",
-  title: "text-3xl sm:text-5xl font-black tracking-tight text-foreground",
-  subtitle: "mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed",
+  headerWrapper:
+    "mx-auto max-w-3xl tv:max-w-5xl text-center mb-10 sm:mb-14 tv:mb-16",
+  title:
+    "text-3xl sm:text-5xl tv:text-6xl font-black tracking-tight text-foreground",
+  subtitle: "mt-3 text-sm sm:text-base tv:text-lg text-muted-foreground leading-relaxed",
 
   // Symmetrical Grid
-  grid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7",
+  grid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 tv:grid-cols-5 gap-6 sm:gap-7 tv:gap-8",
 
   // Minimal Clean Card Base
   cardBase:

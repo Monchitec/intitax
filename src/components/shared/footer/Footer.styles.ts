@@ -1,7 +1,8 @@
 export const footerStyles = {
   footer:
     "border-t border-border bg-card/60 pt-16 pb-12 transition-colors duration-200",
-  container: "mx-auto max-w-7xl px-4 sm:px-6 lg:px-8",
+  container:
+    "mx-auto max-w-7xl tv:max-w-[94vw] 3xl:max-w-[92vw] px-4 sm:px-6 lg:px-8 tv:px-12 3xl:px-16 tv:w-full",
 
   // Top Grid
   grid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-border/70",
@@ -10,7 +11,8 @@ export const footerStyles = {
   brandCol: "lg:col-span-2 space-y-4",
   logoLink:
     "inline-flex items-center transition-opacity hover:opacity-90 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-lg",
-  description: "text-sm text-muted-foreground leading-relaxed max-w-sm",
+  description:
+    "text-sm tv:text-base text-muted-foreground leading-relaxed max-w-sm tv:max-w-md",
   trustTag:
     "inline-flex items-center gap-1.5 text-xs font-semibold text-accent-success",
 
@@ -23,6 +25,6 @@ export const footerStyles = {
   bottomBar:
     "pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground",
   disclaimer:
-    "max-w-3xl text-[11px] text-muted-foreground/80 leading-relaxed mb-4 md:mb-0",
+    "max-w-3xl tv:max-w-5xl text-[11px] tv:text-xs text-muted-foreground/80 leading-relaxed mb-4 md:mb-0",
   copyright: "shrink-0 font-medium",
 };

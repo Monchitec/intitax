@@ -2,7 +2,7 @@ export const navbarStyles = {
   header:
     "sticky top-0 z-50 w-full border-b border-border/80 bg-background/85 backdrop-blur-md transition-colors duration-200",
   container:
-    "mx-auto flex h-20 sm:h-22 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8",
+    "mx-auto flex h-20 sm:h-22 max-w-7xl tv:max-w-[94vw] 3xl:max-w-[92vw] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 tv:px-12 3xl:px-16",
 
   // Logo & Branding
   brandGroup: "flex items-center gap-3 shrink-0",

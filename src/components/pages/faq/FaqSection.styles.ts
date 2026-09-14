@@ -1,7 +1,7 @@
 export const faqStyles = {
   // Connected seamlessly with reduced top padding
   section: "pt-8 sm:pt-12 pb-16 sm:pb-24 bg-background scroll-mt-20 border-t border-border/60",
-  container: "mx-auto max-w-4xl px-4 sm:px-6 lg:px-8",
+  container: "mx-auto max-w-4xl tv:max-w-6xl 3xl:max-w-7xl px-4 sm:px-6 lg:px-8 tv:px-12",
 
   // Header
   headerWrapper: "text-center mb-8 sm:mb-12",

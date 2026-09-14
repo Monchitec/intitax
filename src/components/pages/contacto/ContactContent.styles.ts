@@ -1,5 +1,6 @@
 export const contactStyles = {
-  container: "mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-4 sm:pb-8",
+  container:
+    "mx-auto max-w-5xl tv:max-w-6xl 3xl:max-w-7xl px-4 sm:px-6 lg:px-8 tv:px-12 pt-4 sm:pt-6 pb-4 sm:pb-8",
   backLink:
     "text-muted-foreground hover:text-foreground mb-4 inline-flex items-center gap-2 text-xs sm:text-sm font-medium transition-colors cursor-pointer",
 

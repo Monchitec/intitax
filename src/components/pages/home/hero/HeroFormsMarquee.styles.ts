@@ -1,6 +1,6 @@
 export const heroMarqueeStyles = {
   wrapper:
-    "group/marquee relative w-full overflow-hidden py-2 sm:py-3 mt-5 sm:mt-8 lg:mt-10 select-none",
+    "group/marquee relative w-full overflow-hidden py-2 sm:py-3 mt-5 sm:mt-8 lg:mt-10 tv:mt-auto tv:pt-3 tv:pb-1 select-none",
 
   // Side Fade Gradients for continuous floating effect
   fadeLeft:
@@ -13,7 +13,7 @@ export const heroMarqueeStyles = {
     "flex w-max items-center gap-3.5 sm:gap-4 animate-marquee group-hover/marquee:[animation-play-state:paused] hover:[animation-play-state:paused]",
 
   // FinTech Horizontal Card (Clean & Minimal without badges)
-  card: "group/card relative flex items-center gap-3.5 w-[315px] sm:w-[355px] h-[86px] sm:h-[92px] rounded-2xl border border-border/70 bg-card p-3 sm:p-3.5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 cursor-pointer overflow-hidden",
+  card: "group/card relative flex items-center gap-3.5 w-[315px] sm:w-[355px] tv:w-[380px] h-[86px] sm:h-[92px] tv:h-[98px] rounded-2xl border border-border/70 bg-card p-3 sm:p-3.5 tv:p-4 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 cursor-pointer overflow-hidden",
 
   // Form Code Badge Box
   formCodeBox:

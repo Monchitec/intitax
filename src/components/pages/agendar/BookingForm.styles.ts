@@ -1,5 +1,6 @@
 export const bookingFormStyles = {
-  container: "mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-0 pb-6 sm:pb-10",
+  container:
+    "mx-auto max-w-4xl tv:max-w-6xl 3xl:max-w-7xl px-4 sm:px-6 lg:px-8 tv:px-12 pt-0 pb-6 sm:pb-10",
   backLink:
     "text-muted-foreground hover:text-foreground mb-4 inline-flex items-center gap-2 text-xs sm:text-sm font-medium transition-colors cursor-pointer",
 
