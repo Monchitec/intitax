@@ -45,27 +45,38 @@ Todos los botones de la aplicación consumen los tokens globales y se adaptan so
 
 ```text
 src/
-├── app/                          # ENRUTAMIENTO Y SHELL GLOBAL (Solo puntos de entrada ~15 líneas)
+├── app/                          # ENRUTAMIENTO Y SHELL GLOBAL (Organizado en Route Groups)
 │   ├── globals.css               # Tokens de color globales Claro / Oscuro (:root y .dark)
-│   ├── layout.tsx                # Shell global que incrusta <Navbar />, <Footer />, <ThemeProvider> y <LanguageProvider>
-│   ├── page.tsx                  # Ruta Home (/) -> Ensambla <HeroSection />, <WhyUsSection />, <CtaSection />
-│   ├── agendar/page.tsx          # Ruta /agendar -> Ensambla <BookingForm />
-│   ├── servicios/page.tsx        # Ruta /servicios -> Ensambla <ServicesSection /> y <CtaSection />
-│   └── faq/page.tsx              # Ruta /faq -> Ensambla <FaqSection /> y <CtaSection />
+│   ├── layout.tsx                # Shell raíz obligatorio: SOLO <html>, <body>, fuentes, ThemeProvider y LanguageProvider
+│   │
+│   ├── (sitio)/                  # 🌐 PÁGINA WEB PÚBLICA (Marketing / Informativa)
+│   │   ├── layout.tsx            # Inyecta <Navbar /> + {children} + <Footer /> (exclusivo para la web pública)
+│   │   ├── page.tsx              # Ruta Home (/) -> Ensambla <HeroSection />, <WhyUsSection />, <CtaSection />
+│   │   ├── agendar/page.tsx      # Ruta /agendar -> Ensambla <ContactContent />
+│   │   ├── contacto/page.tsx     # Ruta /contacto -> Ensambla <ContactContent />
+│   │   └── servicios/page.tsx    # Ruta /servicios -> Ensambla <ServicesSection /> y <CtaSection />
+│   │
+│   └── (portal)/                 # 💻 PORTAL DE GESTIÓN / CLIENTES (Módulos interactivos futuros)
+│       ├── layout.tsx            # Layout con contenedor independiente (preparado para <Sidebar />, sin footer)
+│       └── portal/page.tsx       # Ruta /portal -> Dashboard / Inicio del portal
 │
 ├── components/                   # TODOS LOS COMPONENTES VISUALES
 │   │
-│   ├── shared/                   # Componentes universales y reutilizables en toda la web
-│   │   ├── navbar/               # Navbar.tsx + Navbar.styles.ts
-│   │   ├── footer/               # Footer.tsx + Footer.styles.ts
-│   │   ├── ui/                   # Botones (Button), Switch de tema (ThemeToggle), Switch de idioma (LanguageToggle con FlagIcons.tsx)
+│   ├── shared/                   # Componentes universales del sistema (atómicos / globales)
+│   │   ├── ui/                   # Botones (Button), Switch de tema (ThemeToggle), Switch de idioma (LanguageToggle)
 │   │   └── providers/            # ThemeProvider.tsx y LanguageProvider.tsx
 │   │
-│   └── pages/                    # Componentes modulares separados POR CADA PÁGINA (Estructura espejo con src/app/)
-│       ├── home/                 # hero/ (HeroSection, HeroFormsMarquee), why-us/, cta/
-│       ├── agendar/              # BookingForm.tsx + BookingForm.styles.ts
-│       ├── servicios/            # ServicesSection.tsx + ServicesSection.styles.ts
-│       └── faq/                  # FaqSection.tsx + FaqSection.styles.ts
+│   ├── sitio/                    # 🌐 Componentes visuales y módulos de la Página Web Pública
+│   │   ├── navigation/           # Navbar.tsx + Navbar.styles.ts, Footer.tsx + Footer.styles.ts
+│   │   ├── home/                 # hero/, why-us/, cta/ (+ .styles.ts)
+│   │   ├── contacto/             # ContactContent.tsx + ContactContent.styles.ts
+│   │   ├── servicios/            # ServicesSection.tsx + ServicesSection.styles.ts
+│   │   └── agendar/              # Sub-componentes específicos de agendar
+│   │
+│   └── portal/                   # 💻 Componentes visuales exclusivos del Portal de Gestión
+│       ├── layout/               # Sidebar.tsx + Sidebar.styles.ts, PortalHeader.tsx
+│       ├── citas/                # Gestor interactivo de citas (+ .styles.ts)
+│       └── documentos/           # Subida y gestión de documentos (+ .styles.ts)
 │
 ├── i18n/                         # DICCIONARIOS DE IDIOMA (Bilingüe ES / EN)
 │   ├── es.ts                     # Textos y traducciones en Español
@@ -82,14 +93,14 @@ src/
 ## 4. Reglas de Next.js y Rendimiento
 
 1. **Simetría y Puntos de Entrada:**
-   - Todo archivo `src/app/**/page.tsx` debe ser liviano (10 a 20 líneas). Solo define Metadata SEO y renderiza los componentes desde `@/components/pages/...`.
+   - Todo archivo `src/app/**/page.tsx` debe ser liviano (10 a 20 líneas). Solo define Metadata SEO y renderiza los componentes desde `@/components/sitio/...` o `@/components/portal/...`.
    - Ninguna lógica pesada, formularios extensos ni estilos masivos deben residir directamente en `src/app/`.
 2. **Server vs Client Components:**
    - Las páginas (`page.tsx`) y componentes estáticos se mantienen como **Server Components** por defecto (mejor SEO y velocidad).
    - Agregar `"use client"` únicamente en componentes interactivos que usen estado (`useState`), eventos (`onClick`), formularios, menús desplegables, `ThemeToggle` o `LanguageToggle`.
 3. **Navegación:** Usar siempre `<Link href="...">` de `next/link` para transiciones instantáneas sin recarga completa.
 4. **Imágenes:** Usar siempre `<Image />` de `next/image` para optimización automática de peso y formato.
-5. **Imports:** Usar siempre el alias `@/` (ej: `@/components/shared/navbar` o `@/components/pages/home`).
+5. **Imports:** Usar siempre el alias `@/` (ej: `@/components/sitio/navigation` o `@/components/sitio/home`).
 6. **Accesibilidad (a11y):** Todo botón o enlace basado exclusivamente en iconos debe incluir su atributo `aria-label` descriptivo.
 
 ---

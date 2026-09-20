@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider, LanguageProvider } from "@/components/shared/providers";
-import { Navbar } from "@/components/shared/navbar";
-import { Footer } from "@/components/shared/footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -173,9 +171,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            <Navbar />
-            <div className="flex-1">{children}</div>
-            <Footer />
+            {children}
           </LanguageProvider>
         </ThemeProvider>
       </body>

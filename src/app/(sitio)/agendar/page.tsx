@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ContactContent } from "@/components/pages/contacto";
+import { ContactContent } from "@/components/sitio/contacto";
 
 export const metadata: Metadata = {
   title: "Agendar Consulta y Contacto | Intitax",

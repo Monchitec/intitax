@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ServicesSection } from "@/components/pages/servicios";
-import { CtaSection } from "@/components/pages/home";
+import { ServicesSection } from "@/components/sitio/servicios";
+import { CtaSection } from "@/components/sitio/home";
 
 export const metadata: Metadata = {
   title: "Servicios de Impuestos | Intitax",

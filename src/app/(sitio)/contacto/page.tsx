@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ContactContent } from "@/components/pages/contacto";
-import { FaqSection } from "@/components/pages/faq";
+import { ContactContent } from "@/components/sitio/contacto";
+import { FaqSection } from "@/components/sitio/faq";
 
 export const metadata: Metadata = {
   title: "Contacto, Citas y Preguntas Frecuentes | Intitax",

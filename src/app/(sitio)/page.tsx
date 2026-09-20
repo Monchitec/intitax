@@ -1,4 +1,4 @@
-import { HeroSection, WhyUsSection, CtaSection } from "@/components/pages/home";
+import { HeroSection, WhyUsSection, CtaSection } from "@/components/sitio/home";
 
 export default function HomePage() {
   return (
