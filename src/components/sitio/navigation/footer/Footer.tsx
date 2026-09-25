@@ -6,6 +6,8 @@ import Image from "next/image";
 import { Mail, MapPin } from "lucide-react";
 import { useLanguage } from "@/components/shared/providers";
 import { footerStyles } from "./Footer.styles";
+import logoLight from "@/assets/images/logo-light.png";
+import logoDark from "@/assets/images/logo-dark.png";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -21,18 +23,14 @@ export function Footer() {
             <Link href="/" className={footerStyles.logoLink} aria-label="Intitax Inicio">
               {/* Modo Claro */}
               <Image
-                src="/logo-clean.png"
+                src={logoLight}
                 alt="Intitax"
-                width={250}
-                height={70}
                 className="dark:hidden h-13 sm:h-16 w-auto object-contain"
               />
               {/* Modo Oscuro */}
               <Image
-                src="/logo-transparent.png"
+                src={logoDark}
                 alt="Intitax"
-                width={250}
-                height={70}
                 className="hidden dark:block h-13 sm:h-16 w-auto object-contain"
               />
             </Link>

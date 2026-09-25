@@ -66,9 +66,9 @@ export const metadata: Metadata = {
       "Acompañamiento profesional en impuestos federales y estatales de forma clara y segura. Form 1040, Schedule C, ITIN W-7 y cartas del IRS.",
     images: [
       {
-        url: "/logo-clean.png",
-        width: 600,
-        height: 180,
+        url: "/logo-light.png",
+        width: 1200,
+        height: 544,
         alt: "Intitax Logo",
       },
     ],
@@ -78,10 +78,14 @@ export const metadata: Metadata = {
     title: "Intitax | Your Taxes, In Good Hands",
     description:
       "Preparación de impuestos federales y estatales ante el IRS. Atención 100% bilingüe y digital en todo EE.UU.",
-    images: ["/logo-clean.png"],
+    images: ["/logo-light.png"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico?v=2" },
+      { url: "/icon.png?v=2", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png?v=2" }],
   },
 };
 

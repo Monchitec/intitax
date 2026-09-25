@@ -8,6 +8,8 @@ import { useLanguage } from "@/components/shared/providers";
 import { LanguageToggle } from "@/components/shared/ui/language-toggle";
 import { ThemeToggle } from "@/components/shared/ui/theme-toggle";
 import { navbarStyles } from "./Navbar.styles";
+import logoLight from "@/assets/images/logo-light.png";
+import logoDark from "@/assets/images/logo-dark.png";
 
 export function Navbar() {
   const { t } = useLanguage();
@@ -34,19 +36,15 @@ export function Navbar() {
           >
             {/* Modo Claro */}
             <Image
-              src="/logo-clean.png"
+              src={logoLight}
               alt="Intitax"
-              width={220}
-              height={62}
               priority
               className="dark:hidden h-11 sm:h-13 md:h-14 w-auto object-contain"
             />
             {/* Modo Oscuro */}
             <Image
-              src="/logo-transparent.png"
+              src={logoDark}
               alt="Intitax"
-              width={220}
-              height={62}
               priority
               className="hidden dark:block h-11 sm:h-13 md:h-14 w-auto object-contain"
             />
